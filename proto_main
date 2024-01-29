@@ -1,0 +1,49 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
+from selenium.common.exceptions import WebDriverException
+
+import time
+
+ID = 'hl22dil'
+PW = 'kb1211kb'
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_experimental_option("detach", True)
+
+driver = webdriver.Chrome(options=chrome_options)
+
+def find(xpath) :
+    return driver.find_element(By.XPATH, xpath)
+
+def safety(func, n=50) :
+    for _ in range(n) :
+        try :
+            func()
+            return
+        except WebDriverException :
+            time.sleep(0.01)
+        except Exception :
+            time.sleep(0.01)
+    
+    raise WebDriverException
+
+def login():
+    safety(lambda: driver.get('https://member.melon.com/muid/family/ticket/login/web/login_inform.htm?cpId=WP15&returnPage=https://ticket.melon.com/main/readingGate.htm'))
+    safety(lambda: find('//*[@id="conts_section"]/div/div/div[1]/button/span').click())
+    safety(lambda: driver.switch_to.window(driver.window_handles[1]), 500)
+    safety(lambda: find('//*[@id="loginId--1"]').send_keys(ID))
+    safety(lambda: find('//*[@id="password--2"]').send_keys(PW))
+    safety(lambda: find('//*[@id="mainContent"]/div/div/form/div[4]/button[1]').click())
+
+def close_popup():
+    #safety(lambda: find('//*[@id="btn_layerpopup_close"]').click())
+    safety(lambda: driver.find_element_by_link_text("레이어팝업닫기").click())
+
+def move_page():
+    safety(lambda: driver.get('https://ticket.melon.com/performance/index.htm?prodId=209371'))
+
+login()
+time.sleep(5)
+close_popup()
+move_page()
