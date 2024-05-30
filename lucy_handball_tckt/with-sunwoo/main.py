@@ -3,8 +3,8 @@ from mycaptcha import solve_captcha
 import time
 from mysmtp import send_email
 
-ID = "hl2dil"
-PW = "kb1211kb!"
+ID = ""
+PW = ""
 SECTOR = "001"
 
 web = Element()
