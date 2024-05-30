@@ -8,8 +8,8 @@ import datetime
 
 global ID
 global PW
-ID = ["sunshower", "hl1xab", "hl0dil"]
-PW = ["zaqxsw1599", "kb1211kb!", "kb1211kb!"]
+ID = []
+PW = []
 SECTOR = ["001", "002", "003", "004"]
 
 global updated_min
