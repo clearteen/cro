@@ -9,9 +9,9 @@ import time
 from mycaptcha import solve_captcha
 #from mysmtp import send_email
 
-ID = 'hl2dil'
-PW = 'kb1211kb!'
-YYMMDD = '001023'
+ID = ''
+PW = ''
+YYMMDD = ''
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
