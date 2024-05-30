@@ -9,9 +9,9 @@ import time
 from mycaptcha import solve_captcha
 from mysmtp import send_email
 
-ID = 'hl2dil'
-PW = 'kb1211kb!'
-YYMMDD = '001023'
+ID = ''
+PW = ''
+YYMMDD = ''
 MATCH = '/html/body/div[2]/div[4]/div[4]/div[1]/div[5]/a'
 GOAL = 2
 success = 0
