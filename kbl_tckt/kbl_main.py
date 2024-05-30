@@ -12,8 +12,8 @@ import time
 #TEAM = input("구단(ex: https://egis.kbl.or.kr/): ")
 #STADIUM = input("경기장(ex: 1): ")
 #MATCH = input("경기(ex: 1): ")
-ID = 'hyuki1727@naver.com'
-PW = 'hyoin0517()'
+ID = ''
+PW = ''
 TEAM = 'https://egis.kbl.or.kr/'
 STADIUM = '1'
 MATCH = '1'
