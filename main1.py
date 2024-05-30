@@ -9,8 +9,8 @@ from mysmtp import send_email
 from mycaptcha import solve_captcha
 
 
-my_id = "hl2dil"
-my_pw = "kb1211kb!"
+my_id = ""
+my_pw = ""
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
